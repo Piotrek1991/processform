@@ -12,8 +12,6 @@ public class PasswordGeneratorServlet extends HttpServlet {
 
     private static final String ON = "on";
 
-    private RandomPasswordGenerator randomPasswordGenerator = new RandomPasswordGenerator();
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int length = Integer.parseInt(req.getParameter("length"));
@@ -22,7 +20,7 @@ public class PasswordGeneratorServlet extends HttpServlet {
         boolean useLowerCase = ON.equals(req.getParameter("lowercase"));
         boolean useUpperCase = ON.equals(req.getParameter("uppercase"));
 
-        String password = randomPasswordGenerator.generate(length,
+        String password = RandomPasswordGenerator.generate(length,
                 useSymbols, useNumbers, useUpperCase, useLowerCase);
 
         resp.setContentType("text/html");

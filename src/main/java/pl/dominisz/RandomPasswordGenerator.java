@@ -5,7 +5,11 @@ package pl.dominisz;
  * 15.02.2018
  */
 public class RandomPasswordGenerator {
-    public String generate(int length, boolean useSymbols, boolean useNumbers, boolean useUpperCase, boolean useLowerCase) {
+
+    public static String generate(int length, boolean useSymbols, boolean useNumbers,
+                           boolean useUpperCase, boolean useLowerCase) {
+
         return "asasf";
     }
+
 }
